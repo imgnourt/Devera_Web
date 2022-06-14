@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="main.css"
+    <link rel="stylesheet" href="main.css">
+
 </head>
 <body>
     <h1>Devera Store</h1>
@@ -30,9 +31,12 @@
             <td></td>
             <td></td>
             <td>
-                <div> Username <input type="text"></div><br>
-                <div> Password <input type="password"></div><br>
-                <button type="button">Login</button>
+                <label for="fname">Username:</label><br>
+                <input type="text" id="username" name="fname"><br>
+                <label for="lname">Password:</label><br>
+                <input type="password" id="password" name="lname"><br>
+                <button type="submit" onclick="onClickLogin()">Login</button>
+                <div id="submit-text"></div>
             </td>
         </tr>
         <tr>
@@ -66,18 +70,28 @@
         </tr>
         <tr>
             <table border="1" style="height: 1px;" >
-                <td><img src="tien.png"></td>
-                <td><img src="tien.png"></td>
-                <td><img src="tien.png"></td
+                <td><img src="gallery-icon.png"></td>
+                <td><img src="gallery-icon.png"></td>
+                <td><img src="gallery-icon.png"></td
             </table>
         </tr>
         <tr>
             <table border="1" style="height:50% ;" >
-                <td><img src="tien.png"></td>
-                <td><img src="tien.png"></td>
-                <td><img src="tien.png"></td>
+                <td><img src="gallery-icon.png"></td>
+                <td><img src="gallery-icon.png"></td>
+                <td><img src="gallery-icon.png"></td>
             </table>
         </tr>
     </table>
 </body>
+<script>
+    let div1 = document.getElementById("submit-text");
+    let username =document.getElementById("username");
+    let password= document.getElementById("password");
+    let submitText= document.getElementById("submit-text"); 
+    function onClickLogin(){
+        submitText.innerHTML = `${username.value} Login successfully`;
+        console.log(submitText.innerHTML);
+    };
+</script>
 </html>
